@@ -103,7 +103,7 @@ include 'components/add_cart.php';
 
          <a href="category.php?category=jewerlry" class="box">
             <img src="images/cat-2.png" alt="">
-            <h3>Watch & Jewerlry</h3>
+            <h3>Watch & Jewelry</h3>
          </a>
 
          <a href="category.php?category=Sport Shoes" class="box">
