@@ -50,7 +50,7 @@ include 'components/add_cart.php';
                   <span>Fashion Trending</span>
                   <h3>Great Collection</h3>
                   <p>Save more with coupons & up to 20% Off</p>
-                  <a href="product.php" class="btn">Shop Now</a>
+                  <a href="shop.php" class="btn">Shop Now</a>
                </div>
                <div class="image">
                   <img src="images/home-img-1.png" alt="">
@@ -62,7 +62,7 @@ include 'components/add_cart.php';
                   <span>order online</span>
                   <h3>Shopping made easy</h3>
                   <p>Save more with coupons & up to 20% Off</p>
-                  <a href="product.php" class="btn">Shop Now</a>
+                  <a href="shop.php" class="btn">Shop Now</a>
                </div>
                <div class="image">
                   <img src="images/home-img-2.png" alt="">
@@ -74,7 +74,7 @@ include 'components/add_cart.php';
                   <span>every purchase</span>
                   <h3>will be made with pleasure</h3>
                   <p>Save more with coupons & up to 20% Off</p>
-                  <a href="product.php" class="btn">Shop Now</a>
+                  <a href="shop.php" class="btn">Shop Now</a>
                </div>
                <div class="image">
                   <img src="images/home-img-3.png" alt="">
@@ -97,7 +97,7 @@ include 'components/add_cart.php';
 
          <a href="category.php?category=Apparel" class="box">
             <img src="images/cat-1.png" alt="">
-            <h3>Clothes</h3>
+            <h3>Apparel</h3>
 
          </a>
 
