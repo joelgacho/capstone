@@ -38,6 +38,7 @@ $grand_total = 0;
 
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -78,11 +79,11 @@ $grand_total = 0;
          $grand_total = 0;
          $select_cart = $conn->prepare("SELECT * FROM `cart` WHERE user_id = ?");
          $select_cart->execute([$user_id]);
+
          if ($select_cart->rowCount() > 0) {
             while ($fetch_cart = $select_cart->fetch(PDO::FETCH_ASSOC)) {
+               $sub_total = ($fetch_cart['price'] * $fetch_cart['quantity']);
          ?>
-
-
 
                <form action="" method="post" class="box">
                   <input type="hidden" name="cart_id" value="<?= $fetch_cart['id']; ?>">
@@ -91,11 +92,11 @@ $grand_total = 0;
                   <img src="uploaded_img/<?= $fetch_cart['image']; ?>" alt="">
                   <div class="name"><?= $fetch_cart['name']; ?></div>
                   <div class="flex">
-                     <div class="price"><span>$</span><?= $fetch_cart['price']; ?></div>
+                     <div class="price"><span>₱</span><?= number_format($fetch_cart['price'], 2, '.', ','); ?></div>
                      <input type="number" name="qty" class="qty" min="1" max="99" value="<?= $fetch_cart['quantity']; ?>" maxlength="2">
                      <button type="submit" class="fas fa-edit" name="update_qty"></button>
                   </div>
-                  <div class="sub-total"> sub total : <span>$<?= $sub_total = ($fetch_cart['price'] * $fetch_cart['quantity']); ?>/-</span> </div>
+                  <div class="sub-total"> sub total : <span>₱<?= number_format($sub_total, 2, '.', ','); ?>/-</span> </div>
                </form>
          <?php
                $grand_total += $sub_total;
@@ -105,10 +106,12 @@ $grand_total = 0;
          }
          ?>
 
+
       </div>
 
       <div class="cart-total">
-         <p>cart total : <span>$<?= $grand_total; ?></span></p>
+         <p>cart total : <span>₱<?= number_format($grand_total, 2, '.', ','); ?></span></p>
+
          <a href="checkout.php" class="btn <?= ($grand_total > 1) ? '' : 'disabled'; ?>">proceed to checkout</a>
       </div>
 

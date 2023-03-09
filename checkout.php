@@ -83,12 +83,11 @@ if (isset($_POST['submit'])) {
       <h1 class="title">order summary</h1>
 
       <form action="" method="post">
-
          <div class="cart-items">
             <h3>cart items</h3>
             <?php
             $grand_total = 0;
-            $cart_items[] = '';
+            $cart_items = array(); // remove unnecessary initialization
             $select_cart = $conn->prepare("SELECT * FROM `cart` WHERE user_id = ?");
             $select_cart->execute([$user_id]);
             if ($select_cart->rowCount() > 0) {
@@ -97,16 +96,25 @@ if (isset($_POST['submit'])) {
                   $total_products = implode($cart_items);
                   $grand_total += ($fetch_cart['price'] * $fetch_cart['quantity']);
             ?>
-                  <p><span class="name"><?= $fetch_cart['name']; ?></span><span class="price">$<?= $fetch_cart['price']; ?> x <?= $fetch_cart['quantity']; ?></span></p>
+                  <p>
+                     <span class="name"><?= $fetch_cart['name']; ?></span>
+                     <span class="price">₱<?= number_format($fetch_cart['price'], 2, '.', ','); ?> x <?= $fetch_cart['quantity']; ?></span>
+                  </p>
             <?php
                }
             } else {
                echo '<p class="empty">your cart is empty!</p>';
             }
             ?>
-            <p class="grand-total"><span class="name">grand total :</span><span class="price">$<?= $grand_total; ?></span></p>
-            <a href="cart.php" class="btn">veiw cart</a>
+            <p class="grand-total">
+               <span class="name">grand total :</span>
+               <span class="price">₱<?= number_format($grand_total, 2, '.', ','); ?></span>
+            </p>
+            <a href="cart.php" class="btn">view cart</a>
          </div>
+
+
+
 
          <input type="hidden" name="total_products" value="<?= $total_products; ?>">
          <input type="hidden" name="total_price" value="<?= $grand_total; ?>" value="">

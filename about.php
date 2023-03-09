@@ -101,7 +101,7 @@ if (isset($_SESSION['user_id'])) {
 
    <section class="reviews">
 
-      <h1 class="title">customer's reivews</h1>
+      <h1 class="title">customer's reviews</h1>
 
       <div class="swiper reviews-slider">
 
