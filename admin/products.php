@@ -119,7 +119,7 @@ if (isset($_GET['delete'])) {
                <div class="box">
                   <img src="../uploaded_img/<?= $fetch_products['image']; ?>" alt="">
                   <div class="flex">
-                     <div class="price"><span>$</span><?= $fetch_products['price']; ?><span>/-</span></div>
+                     <div class="price"><span>&#8369;</span><?= number_format($fetch_products['price'], 2, '.', ','); ?><span>/-</span></div>
                      <div class="category"><?= $fetch_products['category']; ?></div>
                   </div>
                   <div class="name"><?= $fetch_products['name']; ?></div>
@@ -130,8 +130,12 @@ if (isset($_GET['delete'])) {
                </div>
          <?php
             }
+         }
+         ?>
+
+         }
          } else {
-            echo '<p class="empty">no products added yet!</p>';
+         echo '<p class="empty">no products added yet!</p>';
          }
          ?>
 
