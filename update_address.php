@@ -1,6 +1,6 @@
 <?php
 
-include 'components/connect.php';
+include 'connect.php';
 
 session_start();
 
@@ -43,7 +43,7 @@ if (isset($_POST['submit'])) {
 
 <body>
 
-   <?php include 'components/user_header.php' ?>
+   <?php include 'user_header.php' ?>
 
    <section class="form-container">
 
@@ -71,7 +71,7 @@ if (isset($_POST['submit'])) {
 
 
 
-   <?php include 'components/footer.php' ?>
+   <?php include 'footer.php' ?>
 
 
 

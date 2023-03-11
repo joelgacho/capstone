@@ -47,7 +47,7 @@ if (isset($message)) {
             <p class="name"><?= $fetch_profile['name']; ?></p>
             <div class="flex">
                <a href="profile.php" class="btn">profile</a>
-               <a href="components/user_logout.php" onclick="return confirm('logout from this website?');" class="delete-btn">logout</a>
+               <a href="user_logout.php" onclick="return confirm('logout from this website?');" class="delete-btn">logout</a>
             </div>
             <p class="account">
                <a href="login.php">login</a> or

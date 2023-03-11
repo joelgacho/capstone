@@ -1,6 +1,6 @@
 <?php
 
-include 'components/connect.php';
+include 'connect.php';
 
 session_start();
 
@@ -99,7 +99,7 @@ if (isset($_POST['submit'])) {
 <body>
 
    <!-- header section starts  -->
-   <?php include 'components/user_header.php'; ?>
+   <?php include 'user_header.php'; ?>
    <!-- header section ends -->
 
    <section class="form-container update-form">
@@ -126,7 +126,7 @@ if (isset($_POST['submit'])) {
 
 
 
-   <?php include 'components/footer.php'; ?>
+   <?php include 'footer.php'; ?>
 
 
 

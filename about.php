@@ -1,6 +1,6 @@
 <?php
 
-include 'components/connect.php';
+include 'connect.php';
 
 session_start();
 
@@ -34,7 +34,7 @@ if (isset($_SESSION['user_id'])) {
 <body>
 
    <!-- header section starts  -->
-   <?php include 'components/user_header.php'; ?>
+   <?php include 'user_header.php'; ?>
    <!-- header section ends -->
 
    <div class="heading">
@@ -214,7 +214,7 @@ if (isset($_SESSION['user_id'])) {
 
 
    <!-- footer section starts  -->
-   <?php include 'components/footer.php'; ?>
+   <?php include 'footer.php'; ?>
    <!-- footer section ends -->
 
 

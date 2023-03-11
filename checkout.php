@@ -70,7 +70,7 @@ if (isset($_POST['submit'])) {
 <body>
 
    <!-- header section starts  -->
-   <?php include 'components/user_header.php'; ?>
+   <?php include 'user_header.php'; ?>
    <!-- header section ends -->
 
    <div class="heading">
@@ -161,7 +161,7 @@ if (isset($_POST['submit'])) {
 
 
    <!-- footer section starts  -->
-   <?php include 'components/footer.php'; ?>
+   <?php include 'footer.php'; ?>
    <!-- footer section ends -->
 
 
