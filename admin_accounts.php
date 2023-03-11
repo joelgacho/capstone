@@ -66,7 +66,7 @@ if (isset($_GET['delete'])) {
                      <a href="admin_accounts.php?delete=<?= $fetch_accounts['id']; ?>" class="delete-btn" onclick="return confirm('delete this account?');">delete</a>
                      <?php
                      if ($fetch_accounts['id'] == $admin_id) {
-                        echo '<a href="update_profile.php" class="option-btn">update</a>';
+                        echo '<a href="update_admin_profile.php" class="option-btn">update</a>';
                      }
                      ?>
                   </div>
